@@ -1,0 +1,6 @@
+config.properties
+users.dat
+build/
+.gradle/
+.idea/
+*.iml
