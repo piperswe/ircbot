@@ -213,11 +213,11 @@ public class Bot {
      * @return Whether or not the user is registered
      */
     public boolean userRegistered(User user) {
-        // TODO: Use lambdas or something
-        for (User i : users)
-            if (i.getName().equals(user.getName()))
-                return true;
-        return false;
+        return users.stream().anyMatch((User x) -> x.getName().equals(user.getName()));
+//        for (User i : users)
+//            if (i.getName().equals(user.getName()))
+//                return true;
+//        return false;
     }
 
     /**
@@ -239,7 +239,7 @@ public class Bot {
             user = findUser(user.getName());
 
         String[] argv = query.split(" ");
-        if (!argv[0].startsWith(Character.toString(commandCharacter)) && !argv[0].startsWith("ircbot"))
+        if (!argv[0].startsWith(Character.toString(commandCharacter)) && !argv[0].startsWith(nick))
             return null;
         else if (argv[0].startsWith(nick))
             return new String[]{user.getName() + ": Yo! Use " + commandCharacter + "help to see what I can do for you."};
