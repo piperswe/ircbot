@@ -28,7 +28,7 @@ public class XMLHttpRequest {
      */
     public ReadyState readyState = ReadyState.UNSENT;
     /**
-     * Returns a {@link Iterable<Byte>}, {@link String}, {@link Document}, or {@link org.json.JSONObject JSONObject}, depending of the value of {@link #responseType} that contains the response entity body. This is <code>null</code> if the request is not complete or was not successful.
+     * Returns a {@link Iterable<Byte> Iterable<Byte>}, {@link String}, {@link Document}, or {@link org.json.JSONObject JSONObject}, depending of the value of {@link #responseType} that contains the response entity body. This is <code>null</code> if the request is not complete or was not successful.
      */
     public Object response;
     /**
