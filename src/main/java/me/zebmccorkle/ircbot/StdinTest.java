@@ -12,6 +12,7 @@ public class StdinTest {
         user.addPermission("op");
 
         Bot bot = new Bot();
+        bot.nick = "ircbot";
         bot.registerCommand(new PingCommand());
         bot.registerCommand(new EchoCommand());
         bot.registerCommand(new CalcCommand());
